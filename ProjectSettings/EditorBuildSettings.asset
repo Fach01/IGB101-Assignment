@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Peyten/Scenes/IGB101 Assignment 1 Peyten.unity
     guid: 84a2d76d61f749c4b8bf026a22baef97
+  - enabled: 1
+    path: Assets/Sunny/Scenes/IGB101 Assignment 1 Sunny Lee.unity
+    guid: 0b3fa19eb13106c468732a22935adaeb
   m_configObjects: {}
