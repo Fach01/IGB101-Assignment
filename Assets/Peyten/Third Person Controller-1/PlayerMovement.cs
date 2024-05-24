@@ -24,40 +24,17 @@ public class PlayerMovement : MonoBehaviour{
 
     }
 
-    private void ForwardMovement()
-    {
-        if (Input.GetKey("w"))
-        {
+    private void ForwardMovement(){
+        if(Input.GetKey("w")){
             anim.SetBool("Walking", true);
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
+            if (Input.GetKey(KeyCode.LeftShift)){
                 anim.SetBool("Running", true);
-            }
-            else
-            {
+            } else{
                 anim.SetBool("Running", false);
             }
-        }
-        else if (Input.GetKeyUp("w"))
-        {
+        } else if (Input.GetKeyUp("w")) {
             anim.SetBool("Walking", false);
             anim.SetBool("Running", false);
-        }
-        else if (Input.GetKeyDown("s"))
-        {
-            anim.SetBool("Backwards", true);
-        }
-        else if(Input.GetKeyUp("s"))
-        {
-            anim.SetBool("Backwards", false);
-        }
-        if (Input.GetKey("q"))
-        {
-            anim.SetBool("YassQueen", true);
-        }
-        else
-        {
-            anim.SetBool("YassQueen", false);
         }
     }
 
@@ -79,6 +56,18 @@ public class PlayerMovement : MonoBehaviour{
             anim.SetBool("Waving", true);
         } else if(Input.GetKeyUp("e")){
             anim.SetBool("Waving", false);
+        }
+
+        if(Input.GetKeyDown("q")){
+            anim.SetBool("Action 1", true);
+        } else if(Input.GetKeyUp("q")){
+            anim.SetBool("Action 1", false);
+        }
+
+        if(Input.GetKeyDown("r")){
+            anim.SetBool("Action 2", true);
+        } else if(Input.GetKeyUp("r")){
+            anim.SetBool("Action 2", false);
         }
     }
 }

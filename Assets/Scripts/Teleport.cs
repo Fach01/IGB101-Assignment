@@ -8,7 +8,7 @@ public class Teleport : MonoBehaviour
    private void OnTriggerEnter(Collider otherObject)
    {
 	   if(otherObject.transform.tag == "Player"){
-		   otherObject.gameObject.Transform.position = otherportal.position;
+		   otherObject.gameObject.transform.position = otherportal.position;
 	   }
    }
 }
