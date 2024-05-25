@@ -2,34 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class LevelSwitch : MonoBehaviour
-{
+{      
     GameManager gameManager;
     public string nextLevel;
-    public AudioSource sfx;
 
-    private void Start()
+
+    // Start is called before the first frame update
+    void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
-    
-    private void OnTriggerEnter(Collider collider) {
-        if (collider.transform.tag == "Player") {
-            if (gameManager.levelComplete) {
-                StartCoroutine(PlaySFXAndLoadNextScene());
-                
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    private void OnTriggerEnter(Collider otherObject)
+    {
+        if (otherObject.transform.tag == "Player")
+        {
+            if (gameManager.levelComplete)
+            {
+                SceneManager.LoadScene(nextLevel);
             }
         }
-    }
-
-    private IEnumerator PlaySFXAndLoadNextScene() {
-        
-        if (sfx != null) {
-            sfx.Play();
-            yield return new WaitForSeconds(4);
-        }
-
-        SceneManager.LoadScene(nextLevel);
     }
 }
