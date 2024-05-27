@@ -5,10 +5,12 @@ using UnityEngine;
 public class Teleport : MonoBehaviour
 {
    public Transform otherportal;
+	public GameObject player;
+	public GameObject Camera;
    private void OnTriggerEnter(Collider otherObject)
    {
 	   if(otherObject.transform.tag == "Player"){
-		   otherObject.gameObject.transform.position = otherportal.position;
+		   player.transform.position = otherportal.transform.position;
 	   }
    }
 }
