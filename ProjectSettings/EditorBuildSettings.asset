@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IGB101 Assignment 1 Finn.unity
     guid: 5501f43d0ea255e44aaff09a11c1f7b2
+  - enabled: 1
+    path: Assets/Scenes/IGB101 Assignment 1 Harry.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/End screen.unity
+    guid: 33b191cbda4842846872cf5bba330ae7
   m_configObjects: {}
