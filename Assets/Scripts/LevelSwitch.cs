@@ -11,22 +11,25 @@ public class LevelSwitch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        if(gameManager != null) gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter(Collider otherObject)
     {
         if (otherObject.transform.tag == "Player")
         {
             if (gameManager.levelComplete)
             {
-                SceneManager.LoadScene(nextLevel);
+                switchscene();
             }
         }
+    }
+    public void switchscene()
+    {
+        SceneManager.LoadScene(nextLevel);
+    }
+    public void quit()
+    {
+        Application.Quit();
     }
 }
